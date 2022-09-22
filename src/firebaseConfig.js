@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore/lite";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtXY2fHven1VjLdd9OdzicIfRtlbuKDHQ",
@@ -8,9 +9,10 @@ const firebaseConfig = {
   storageBucket: "vue-3-2022-c8f7c.appspot.com",
   messagingSenderId: "358722206767",
   appId: "1:358722206767:web:04c9c59f47f37a67cd1ada"
-};
+}
 
-initializeApp(firebaseConfig);
-const auth = getAuth();
+initializeApp(firebaseConfig)
+const auth = getAuth()
+const db = getFirestore()
 
-export { auth }
+export { auth, db }
